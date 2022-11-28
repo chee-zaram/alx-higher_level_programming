@@ -4,6 +4,6 @@ This repo contains mainly projects done with the Python programming language in 
 ***
 ## Python - Hello, World
 ***
-Basics of Python, focusing on string manipulation. [click]().
+Basics of Python, focusing on string manipulation. [click](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x00-python-hello_world).
 ***
 
