@@ -1,4 +1,4 @@
 # Python - import & modules
 ***
-Project to help learn the how to create, import and use modules in Python.
+Project to help learn how to create, import and use modules in Python.
 ***

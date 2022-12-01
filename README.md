@@ -12,5 +12,5 @@ Using conditional statements and loops within Python programmers. [click](https:
 ***
 ## Python - import & modules
 ***
-Importing names and variables from modules and making use of them. Using the ***dir()*** built-in.
+Importing names and variables from modules and making use of them. Using the ***dir()*** built-in. [click](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x02-python-import_modules).
 ***
