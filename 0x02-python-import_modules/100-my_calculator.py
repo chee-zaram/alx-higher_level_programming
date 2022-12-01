@@ -11,7 +11,7 @@ if __name__ == "__main__":
         exit(1)
 
     op = argv[2]
-    if len(op) != 1 and op not in "+-*/":
+    if len(op) != 1 or op not in "+-*/":
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
 
