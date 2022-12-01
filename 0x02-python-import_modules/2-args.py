@@ -7,7 +7,7 @@ if __name__ == "__main__":
     argc = len(argv)
     if argc == 1:
         print("0 arguments.")
-    else:
+    elif argc > 1:
         print("{:d} arguments:".format(argc - 1))
         for i in range(1, argc):
             print("{:d}: {}".format(i, argv[i]))
