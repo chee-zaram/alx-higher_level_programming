@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 # Program to display the command line arguments passed to the program
-if __name__ == "__main__":
+def simp_print_args():
     from sys import argv
 
     argc = len(argv)
@@ -15,3 +15,7 @@ if __name__ == "__main__":
         print(header)
         for i in range(1, argc):
             print("{:d}: {}".format(i, argv[i]))
+
+
+if __name__ == "__main__":
+    simp_print_args()

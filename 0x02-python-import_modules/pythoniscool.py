@@ -1,11 +1,6 @@
 #!/usr/bin/python3
+"""#pythoniscool module
+"""
 from sys import stdout
 
-
-def main():
-    """#pythoniscool module
-    """
-    stdout.write("#pythoniscool\n")
-
-
-main()
+stdout.write("#pythoniscool\n")

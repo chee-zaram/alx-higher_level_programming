@@ -2,7 +2,7 @@
 
 # Imports functions from a module and uses them to perform basic operations
 # on integers passed as commandline arguments
-if __name__ == "__main__":
+def simp_cmdLine_calc():
     from sys import argv, exit
     from calculator_1 import add, sub, mul, div
 
@@ -26,3 +26,7 @@ if __name__ == "__main__":
     else:
         result = div(a, b)
     print("{:d} {} {:d} = {:d}".format(a, op, b, result))
+
+
+if __name__ == "__main__":
+    simp_cmdLine_calc()
