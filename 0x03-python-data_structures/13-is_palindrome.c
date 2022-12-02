@@ -9,8 +9,7 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *temp = NULL;
-	int *buff, len = 0, idx = 0, b, e, reval = 0;
-
+	int *buff, beg, end, len = 0, idx = 0, reval = 0;
 
 	if (head)
 	{
@@ -22,15 +21,15 @@ int is_palindrome(listint_t **head)
 		buff = malloc(sizeof(int) * len);
 		if (!buff)
 		{
-			perror("Could not check list");
-			exit(127);
+			write(2, "Could not check list", 20);
+			return (NO_PAL); /* should call exit() but not allowed */
 		}
 
 		for (temp = *head; temp; temp = temp->next)
 			buff[idx++] = temp->n;
-		b = 0;
-		e = idx - 1;
-		reval = check_match(&buff[b], &buff[e]);
+		beg = 0;
+		end = idx - 1;
+		reval = check_match(&buff[beg], &buff[end]);
 		free(buff);
 
 		return (reval);
