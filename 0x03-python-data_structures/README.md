@@ -14,3 +14,8 @@ Working on solutions for tasks in this project help answer the following questio
 * What is tuple packing?
 * What is sequence unpacking?
 * What is the del statement and how is it used?
+***
+Technical interview preparation: Write a C function that checks if a listint_t list is a palindrome.
+***
+* We were not allowed to use any search engine and had to whiteboard first.
+* An empty list is considered a palindrome.
