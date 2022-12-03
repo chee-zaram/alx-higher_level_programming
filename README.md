@@ -16,5 +16,5 @@ Importing names and variables from modules and making use of them. Using the ***
 ***
 ## Python - Data Structures: Lists, Tuples
 ***
-Introduction to using data structures in Python. [click]().
+Introduction to using data structures in Python. [click](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x03-python-data_structures).
 ***
