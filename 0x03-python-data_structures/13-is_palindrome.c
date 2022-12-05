@@ -13,26 +13,28 @@ int is_palindrome(listint_t **head)
 
 	if (head)
 	{
-		if (!*head)
-			return (PAL);
-		for (temp = *head; temp; temp = temp->next)
-			len++;
-
-		buff = malloc(sizeof(int) * len);
-		if (!buff)
+		if (*head)
 		{
-			write(2, "Could not check list", 20);
-			return (NO_PAL); /* should call exit() but not allowed */
+			for (temp = *head; temp; temp = temp->next)
+				len++;
+
+			buff = malloc(sizeof(int) * len);
+			if (!buff)
+			{
+				write(2, "Could not check list", 20);
+				return (FAIL); /* should call exit() but not allowed */
+			}
+
+			for (temp = *head; temp; temp = temp->next)
+				buff[idx++] = temp->n;
+			beg = 0;
+			end = idx - 1;
+			reval = check_match(&buff[beg], &buff[end]);
+			free(buff);
+			if (!reval)
+				return (NO_PAL);
 		}
-
-		for (temp = *head; temp; temp = temp->next)
-			buff[idx++] = temp->n;
-		beg = 0;
-		end = idx - 1;
-		reval = check_match(&buff[beg], &buff[end]);
-		free(buff);
-
-		return (reval);
+		return (PAL);
 	}
 	return (NO_PAL);
 }
@@ -58,4 +60,3 @@ int check_match(int *big, int *end)
 		return (1);
 	}
 }
-

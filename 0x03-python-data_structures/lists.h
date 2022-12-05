@@ -3,6 +3,7 @@
 
 #define NO_PAL	0
 #define PAL	1
+#define FAIL	0
 
 #include <stdio.h>
 #include <stdlib.h>
