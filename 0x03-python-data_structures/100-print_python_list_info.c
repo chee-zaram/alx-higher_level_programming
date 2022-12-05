@@ -1,4 +1,5 @@
-#include "Python.h"
+#define PY_SSIZE_T_CLEAN
+#include <Python.h>
 
 /**
  * print_python_list_info - Display details on items in a list using PyObject
@@ -22,7 +23,7 @@ void print_python_list_info(PyObject *list)
 		for (idx = 0; idx < listLen; idx++)
 		{
 			item = PyList_GetItem(list, idx);
-			printf("Element %lu: %s\n", idx, Py_TYPE(item)->tp_name);
+			printf("Element %lu: %s\n", idx, item->ob_type->tp_name);
 		}
 	}
 }
