@@ -19,3 +19,9 @@ Technical interview preparation: Write a C function that checks if a listint_t l
 ***
 * We were not allowed to use any search engine and had to whiteboard first.
 * An empty list is considered a palindrome.
+***
+An advanced C task required us to learn about PyObject and then write a C function that:
+* Prints the size of a Python list
+* Prints the number of allocations made
+* All the elements type in the list
+***
