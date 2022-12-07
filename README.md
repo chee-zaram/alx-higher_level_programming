@@ -20,5 +20,5 @@ Introduction to using data structures in Python. [click](https://github.com/chee
 ***
 ## Python - More Data Structures: Set, Dictionary
 ***
-Here, we solve tasks that help us master the concepts of dictionaries, sets, the lambda function, map, reduce and filter functions, and how to use them. [click]().
+Here, we solve tasks that help us master the concepts of **dictionaries**, **set**, the **lambda** function, **map**, **reduce** and **filter** functions, and how to use them. [click](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x04-python-more_data_structures).
 ***
