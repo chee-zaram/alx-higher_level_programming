@@ -18,3 +18,7 @@ Importing names and variables from modules and making use of them. Using the ***
 ***
 Introduction to using data structures in Python. [click](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x03-python-data_structures).
 ***
+## Python - More Data Structures: Set, Dictionary
+***
+Here, we solve tasks that help us master the concepts of dictionaries, sets, the lambda function, map, reduce and filter functions, and how to use them. [click]().
+***
