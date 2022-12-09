@@ -15,7 +15,7 @@ This directory contains solutions to mini tasks that help strengthen understandi
 * a function that returns a key with the biggest integer value, assuming all values are integers and no two students will have the same score.
 * a function that returns a list with all values multiplied by a number without using loops.
 * Technical interview preparation: create a function that converts a number in Roman numeral to an integer value assuming the number will be between 1 to 3999.
-** a function that returns the weighted average of all integers tuple of the format **(<score>, <weight>)**. If list is empty, return 0.
+* a function that returns the weighted average of all integers tuple of the format **(\<score\>, \<weight\>)**. If list is empty, return 0.
 * a function that computes the square value of all integers of a matrix using **map** without modifying the original matrix, and without using loops, with file being 3 lines max.
 * a function that deletes keys with a specific value in a dictionary.
 ***
