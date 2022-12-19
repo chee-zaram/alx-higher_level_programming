@@ -6,12 +6,12 @@ def safe_print_list_integers(my_list=[], x=0):
     IndexError is not taken care of
     """
 
-    idx = 0
+    leng = 0
     for idx in range(x):
         try:
             print("{:d}".format(my_list[idx]), end='')
-            idx += 1
+            leng += 1
         except (ValueError, TypeError):
             pass
     print()
-    return idx
+    return leng
