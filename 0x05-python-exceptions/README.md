@@ -15,5 +15,6 @@ the following questions;
 
 ---
 
-_NB: [103-python.c]() needed us to three functions that print some basic info about Python lists,
+_NB: [103-python.c](https://github.com/chee-zaram/alx-higher_level_programming/blob/main/0x05-python-exceptions/103-python.c)
+needed us to three functions that print some basic info about Python lists,
 Python bytes, and Python float objectives_.
