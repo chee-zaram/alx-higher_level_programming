@@ -11,6 +11,7 @@ class Square:
 
         Args:
             size (int): Size of the square
+            position (tuple): A tuple of two positive number for x and y axis
         """
         if type(size) != int:
             raise TypeError("size must be an integer")
