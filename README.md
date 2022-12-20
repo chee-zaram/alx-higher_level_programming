@@ -53,3 +53,13 @@ Here, we solve tasks that help us master the concepts of **dictionaries**, **set
 ---
 
 Error and exception handling during during programme run. [click](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x05-python-exceptions)
+
+---
+
+## Python - Classes and Objects
+
+---
+
+Learning about Object Oriented Programming (OOB) in Python. [click](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x06-python-classes)
+
+---
