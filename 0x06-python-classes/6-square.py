@@ -35,6 +35,8 @@ class Square:
 
     @property
     def position(self):
+        """:obj:`tuple` of :obj:`int`: index 0 sets spaces and 1 sets newline
+        """
         return self.__position
 
     @position.setter
