@@ -12,7 +12,20 @@ class Square:
         Args:
             size (int): Size of the square
         """
+        if type(size) != int:
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
+
         self.__size = size
+
+        if type(position) != tuple or len(position) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if type(position[0]) != int or type(position[1]) != int:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if position[0] < 0 or position[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+
         self.__position = position
 
     @property
@@ -55,11 +68,10 @@ class Square:
         if self.__size == 0:
             print()
         else:
-            for newLine in range(self.__position[1]):
+            x, y = self.__position
+            for _ in range(y):
                 print()
-            for i in range(self.__size):
-                for space in range(self.__position[0]):
-                    print(" ", end='')
-                for j in range(self.__size):
-                    print("#", end='')
-                print()
+            for _ in range(self.__size):
+                if x:
+                    print(' ' * x, end='')
+                print('#' * self.__size)
