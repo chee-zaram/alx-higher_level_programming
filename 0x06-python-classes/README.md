@@ -2,9 +2,9 @@
 
 ---
 
-This is a project that serves and an introduction into Object Oriented Programming
-in Python, and and solutions contained here help are practical solutions that
-help answer the following question:
+This is a project that serves as an introduction to Object Oriented Programming
+in Python, and solutions contained here are practical solutions that help answer
+the following question:
 
 ---
 
