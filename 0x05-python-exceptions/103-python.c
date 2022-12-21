@@ -1,4 +1,4 @@
-#include <Python.h>
+#include "/usr/include/python3.10/Python.h"
 
 /**
  * print_python_float - Function to print details on Python float object
@@ -78,7 +78,7 @@ void print_python_list(PyObject *p)
 	if (!strcmp(p->ob_type->tp_name, "list"))
 	{
 		printf("[*] Size of the Python List = %ld\n", object->ob_size);
-		printf("[*] Allocated = %ld\n", list->allocated);
+		printf("[*] Allocated = %ld\n", alloc);
 
 		for (idx = 0; idx < size; ++idx)
 		{
