@@ -1,4 +1,4 @@
-#include <Python.h>
+#include "/usr/include/python3.10/Python.h"
 
 /**
  * print_python_float - Function to print details on Python float object
@@ -15,7 +15,7 @@ void print_python_float(PyObject *p)
 	if (!strcmp(p->ob_type->tp_name, "float"))
 	{
 		buf = PyOS_double_to_string(fl_ob->ob_fval, 'r', 0,
-				PyDTSF_ADD_DOT_0, NULL);
+				Py_DTSF_ADD_DOT_0, NULL);
 		printf("  value: %s\n", buf);
 		PyMem_Free(buf);
 		return;
@@ -49,7 +49,7 @@ void print_python_bytes(PyObject *p)
 		for (idx = 0; idx < size; ++idx)
 		{
 			printf("%02hhx", bytes_ob->ob_sval[idx]);
-			if (i == (size - 1))
+			if (idx == (size - 1))
 				printf("\n");
 			else
 				printf(" ");
@@ -67,7 +67,7 @@ void print_python_list(PyObject *p)
 	PyVarObject *object = (PyVarObject *)p;
 	PyListObject *list = (PyListObject *)p;
 	Py_ssize_t size, alloc, idx;
-	char *type;
+	const char *type;
 
 	size  = object->ob_size;
 	alloc  = list->allocated;
@@ -77,7 +77,7 @@ void print_python_list(PyObject *p)
 
 	if (!strcmp(p->ob_type->tp_name, "list"))
 	{
-		printf("[*] Size of the Python List = %ld\n", variable->ob_size);
+		printf("[*] Size of the Python List = %ld\n", object->ob_size);
 		printf("[*] Allocated = %ld\n", list->allocated);
 
 		for (idx = 0; idx < size; ++idx)
