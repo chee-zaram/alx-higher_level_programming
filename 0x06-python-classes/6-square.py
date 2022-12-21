@@ -59,6 +59,12 @@ class Square:
 
 
 def check_size(size):
+    """Checks if the size passed to class Square is valid
+
+    Args:
+        size (int): The size of the square at a given instance
+    """
+
     if type(size) != int:
         raise TypeError("size must be an integer")
     if size < 0:
@@ -66,6 +72,12 @@ def check_size(size):
 
 
 def check_pos(position):
+    """Checks if the position passed to class Square is valid
+
+    Args:
+        position: The position at which the square should be printed
+    """
+
     if type(position) != tuple or len(position) != 2 \
         or type(position[0]) != int or type(position[1]) != int \
             or position[0] < 0 or position[1] < 0:

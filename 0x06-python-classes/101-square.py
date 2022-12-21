@@ -13,18 +13,10 @@ class Square:
             size (int): Size of the square
             position (tuple): A tuple of two positive number for x and y axis
         """
-        if type(size) != int:
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
-
+        check_size(size)
         self.__size = size
 
-        if type(position) != tuple or len(position) != 2 \
-            or type(position[0]) != int or type(position[1]) != int \
-                or position[0] < 0 or position[1] < 0:
-            raise TypeError("position must be a tuple of 2 positive integers")
-
+        check_pos(position)
         self.__position = position
 
     @property
@@ -37,11 +29,7 @@ class Square:
 
     @size.setter
     def size(self, value):
-        if type(value) != int:
-            raise TypeError("size must be an integer")
-        if value < 0:
-            raise ValueError("size must be >= 0")
-
+        check_size(value)
         self.__size = value
 
     def area(self):
@@ -58,11 +46,7 @@ class Square:
 
     @position.setter
     def position(self, value):
-        if type(value) != tuple or len(value) != 2 \
-            or type(value[0]) != int or type(value[1]) != int \
-                or value[0] < 0 or value[1] < 0:
-            raise TypeError("position must be a tuple of 2 positive integers")
-
+        check_pos(value)
         self.__position = value
 
     def my_print(self):
@@ -98,3 +82,29 @@ class Square:
                 sq_str += ('#' * self.__size) + '\n'
             sq_str = sq_str[:-1]
             return sq_str
+
+
+def check_size(size):
+    """Checks if the size passed to class Square is valid
+
+    Args:
+        size (int): The size of the square at a given instance
+    """
+
+    if type(size) != int:
+        raise TypeError("size must be an integer")
+    if size < 0:
+        raise ValueError("size must be >= 0")
+
+
+def check_pos(position):
+    """Checks if the position passed to class Square is valid
+
+    Args:
+        position: The position at which the square should be printed
+    """
+
+    if type(position) != tuple or len(position) != 2 \
+        or type(position[0]) != int or type(position[1]) != int \
+            or position[0] < 0 or position[1] < 0:
+        raise TypeError("position must be a tuple of 2 positive integers")
