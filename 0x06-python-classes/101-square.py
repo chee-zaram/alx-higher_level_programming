@@ -13,10 +13,10 @@ class Square:
             size (int): Size of the square
             position (tuple): A tuple of two positive number for x and y axis
         """
-        check_size(size)
+        Square.check_size(size)
         self.__size = size
 
-        check_pos(position)
+        Square.check_pos(position)
         self.__position = position
 
     @property
@@ -29,7 +29,7 @@ class Square:
 
     @size.setter
     def size(self, value):
-        check_size(value)
+        Square.check_size(value)
         self.__size = value
 
     def area(self):
@@ -46,7 +46,7 @@ class Square:
 
     @position.setter
     def position(self, value):
-        check_pos(value)
+        Square.check_pos(value)
         self.__position = value
 
     def my_print(self):
@@ -83,28 +83,28 @@ class Square:
             sq_str = sq_str[:-1]
             return sq_str
 
+    @staticmethod
+    def check_size(size):
+        """Checks if the size passed to class Square is valid
 
-def check_size(size):
-    """Checks if the size passed to class Square is valid
+        Args:
+            size (int): The size of the square at a given instance
+        """
 
-    Args:
-        size (int): The size of the square at a given instance
-    """
+        if type(size) != int:
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
 
-    if type(size) != int:
-        raise TypeError("size must be an integer")
-    if size < 0:
-        raise ValueError("size must be >= 0")
+    @staticmethod
+    def check_pos(position):
+        """Checks if the position passed to class Square is valid
 
+        Args:
+            position: The position at which the square should be printed
+        """
 
-def check_pos(position):
-    """Checks if the position passed to class Square is valid
-
-    Args:
-        position: The position at which the square should be printed
-    """
-
-    if type(position) != tuple or len(position) != 2 \
-        or type(position[0]) != int or type(position[1]) != int \
-            or position[0] < 0 or position[1] < 0:
-        raise TypeError("position must be a tuple of 2 positive integers")
+        if type(position) != tuple or len(position) != 2 \
+            or type(position[0]) != int or type(position[1]) != int \
+                or position[0] < 0 or position[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
