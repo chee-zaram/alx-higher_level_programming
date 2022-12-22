@@ -82,7 +82,7 @@ class SinglyLinkedList(Node):
             temp.next_node = newNode
 
     def __repr__(self):
-        return "<Class SinglyLinkedList, len: {}".format(self.__len__)
+        return "<class 'SinglyLinkedList'>"
 
     def __str__(self):
         """Prints the data in the list, one line per node data
