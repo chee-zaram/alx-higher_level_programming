@@ -14,12 +14,12 @@ class Node:
                 the list
         """
 
-        if isinstance(data, int) is None:
+        if not isinstance(data, int):
             raise TypeError("data must be an integer")
 
         self.__data = data
 
-        if next_node and isinstance(next_node, Node) is None:
+        if next_node and not isinstance(next_node, Node):
             raise TypeError("next_node must be a Node object")
 
         self.__next_node = next_node
@@ -32,7 +32,7 @@ class Node:
 
     @data.setter
     def data(self, value):
-        if isinstance(value, int) is None:
+        if not isinstance(value, int):
             raise TypeError("data must be an integer")
 
         self.__data = value
@@ -44,7 +44,7 @@ class Node:
 
     @next_node.setter
     def next_node(self, value):
-        if value and isinstance(value, Node) is None:
+        if value and not isinstance(value, Node):
             raise TypeError("next_node must be a Node object")
 
         self.__next_node = value
