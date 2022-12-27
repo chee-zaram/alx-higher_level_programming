@@ -1,0 +1,152 @@
+==============================================
+	The module ``100-matrix_mul``
+==============================================
+
+Tests for the function ``matrix_mul``
+=====================================
+
+
+Import function from module
+---------------------------
+::
+	>>> matrix_mul = __import__("100-matrix_mul").matrix_mul
+
+
+Lists of lists with only integers
+---------------------------------
+::
+	>>> matrix_mul([[1, 2, 4], [4, 34, 5]], [[24, 5, 2], [3, 4, 5], [1, 2, 3]])
+	[[34, 21, 24], [203, 166, 193]]
+
+	>>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+	[[7, 10], [15, 22]]
+
+	>>> matrix_mul([[1, 2]], [[3, 4], [5, 6]])
+	[[13, 16]]
+
+	>>> matrix_mul([[3], [5]], [[2, 3]])
+	[[6, 9], [10, 15]]
+
+	>>> matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8]])
+	[[19, 22], [43, 50]]
+
+	>>> matrix_mul([[1, 2, 3], [4, 5, 6]], [[7, 8], [9, 10], [11, 12]])
+	[[58, 64], [139, 154]]
+
+	>>> matrix_mul([[1, 2], [3, 4]], [[5, 6, 7], [8, 9, 10]])
+	[[21, 24, 27], [47, 54, 61]]
+
+	>>> matrix_mul([[1, 2], [3, 4], [5, 6]], [[7, 8, 9], [10, 11, 12]])
+	[[27, 30, 33], [61, 68, 75], [95, 106, 117]]
+
+
+Lists of lists with integers and floats
+---------------------------------------
+::
+	>>> matrix_mul([[1.5, 2.5], [3.5, 4.5]], [[5.5, 6.5], [7.5, 8.5]])
+	[[27.0, 31.0], [53.0, 61.0]]
+	
+	>>> matrix_mul([[1.5, 2.5, 3.5], [4.5, 5.5, 6.5]], [[7.5, 8.5], [9.5, 10.5], [11.5, 12.5]])
+	[[75.25, 82.75], [160.75, 177.25]]
+
+	>>> matrix_mul([[1.5, 2.5], [3.5, 4.5]], [[5.5, 6.5, 7.5], [8.5, 9.5, 10.5]])
+	[[29.5, 33.5, 37.5], [57.5, 65.5, 73.5]]
+
+
+Incorrect number of rows or/and columns
+---------------------------------------
+::
+	>>> matrix_mul([[1, 2, 3], [4, 5, 6]], [[7, 8], [9, 10]])
+	Traceback (most recent call last):
+		...
+	ValueError: m_a and m_b can't be multiplied
+
+	>>> matrix_mul([[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]])
+	Traceback (most recent call last):
+		...
+	ValueError: m_a and m_b can't be multiplied
+
+	>>> matrix_mul([[1, 2, 3, 13], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]])
+	Traceback (most recent call last):
+		...
+	TypeError: each row of m_a must be of the same size
+
+	>>> matrix_mul([[1, 2, 3], [4, 5, 6]], [[7, 8, 9, 13], [10, 11, 12]])
+	Traceback (most recent call last):
+		...
+	TypeError: each row of m_b must be of the same size
+
+
+Empty list and list in list
+---------------------------
+::
+	>>> matrix_mul([[1, 2], [3, 4]], [])
+	Traceback (most recent call last):
+		...
+	ValueError: m_b can't be empty
+
+	>>> matrix_mul([[], []], [[5, 6], [7, 8]])
+	Traceback (most recent call last):
+		...
+	ValueError: m_a can't be empty
+
+	>>> matrix_mul([[2, 4]], [[]])
+	Traceback (most recent call last):
+		...
+	ValueError: m_b can't be empty
+
+
+TypeErrors
+----------
+::
+	>>> matrix_mul([[1, 2], [3, 'a']], [[5, 6], [7, 8]])
+	Traceback (most recent call last):
+		...
+	TypeError: m_a should only contain integers or floats
+
+	>>> matrix_mul(1, "str")
+	Traceback (most recent call last):
+		...
+	TypeError: m_a must be a list
+
+	>>> matrix_mul([], "str")
+	Traceback (most recent call last):
+		...
+	TypeError: m_b must be a list
+
+	>>> matrix_mul([[1, 2], 23, 45], [[5, 6], [7, 8]])
+	Traceback (most recent call last):
+		...
+	TypeError: m_a must be a list of lists
+
+	>>> matrix_mul([[1, 2], [23, 45]], [5, 6, [7, 8]])
+	Traceback (most recent call last):
+		...
+	TypeError: m_b must be a list of lists
+
+
+None
+----
+::
+	>>> matrix_mul(None, [[5, 6], [7, 8]])
+	Traceback (most recent call last):
+		...
+	TypeError: m_a must be a list
+
+	>>> matrix_mul([[1, 2], [3, 4]], None)
+	Traceback (most recent call last):
+		...
+	TypeError: m_b must be a list
+
+	>>> matrix_mul([[None]], [[5, 6], [7, 8]])
+	Traceback (most recent call last):
+		...
+	TypeError: m_a should only contain integers or floats
+
+	>>> matrix_mul([[1, 2], [3, 4]], [[None, 8], [5, 6]])
+	Traceback (most recent call last):
+		...
+	TypeError: m_b should only contain integers or floats
+
+	>>> print(matrix_mul(None, None))
+	None
