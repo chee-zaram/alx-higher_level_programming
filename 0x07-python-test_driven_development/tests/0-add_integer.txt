@@ -1,0 +1,67 @@
+============================================
+	The ``0-add_integer.py`` module
+============================================
+
+Tests for ``add_integer``
+=========================
+
+::
+	>>> add_integer = __import__("0-add_integer").add_integer
+
+Integers
+--------
+::
+	>>> a = 1
+	>>> b = 2
+	>>> print(add_integer(a, b))
+	3
+
+Floats
+------
+::
+	>>> a = 2.3
+	>>> print(add_integer(a, b))
+	4
+	>>> print(add_integer(3.5, b))
+	5
+	>>> print(add_integer(3.9, 2.1))
+	5
+
+Negative numbers
+----------------
+::
+	>>> print(add_integer(-34, -2))
+	-36
+	>>> print(add_integer(-2.2, 5))
+	3
+	>>> print(add_integer(9.999, -23.8))
+	-14
+
+Optional Argument
+-----------------
+::
+	>>> print(add_integer(a))
+	100
+
+TypeErrors
+----------
+::
+	>>> string_type = "str is a wrong type"
+	>>> list_type = [1, 2]
+	>>> empty_list = []
+	>>> dict_type = {1: '1'}
+
+	>>> add_integer(a, string_type)
+	Traceback (most recent call last):
+		...
+	TypeError: b must be an integer
+
+	>>> add_integer(list_type, b)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+	>>> add_integer(a, empty_list)
+	Traceback (most recent call last):
+		...
+	TypeError: b must be an integer
