@@ -1,0 +1,55 @@
+=============================
+The ``3-say_my_name`` module
+=============================
+
+Tests for the function ``say_my_name``
+======================================
+::
+	>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+Expected inputs
+---------------
+::
+	>>> first = "Chee-zaram"
+	>>> last = "Okeke"
+	>>> say_my_name(first, last)
+	My name is Chee-zaram Okeke
+
+	>>> say_my_name("Ovy", "Evbodi")
+	My name is Ovy Evbodi
+
+Empty string(s)
+---------------
+::
+	>>> say_my_name("Ovy", "")
+	My name is Ovy 
+	>>> say_my_name("", "Okeke")
+	My name is  Okeke
+	>>> say_my_name("", "")
+	My name is  
+
+Optional argument
+-----------------
+::
+	>>> say_my_name("Chee-zaram")
+	My name is Chee-zaram 
+
+TypeError
+---------
+::
+	>>> say_my_name(2, "Okeke")
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
+	>>> say_my_name("Ovy", ['one'])
+	Traceback (most recent call last):
+		...
+	TypeError: last_name must be a string
+
+None
+----
+::
+	>>> print(say_my_name(None, "Okeke"))
+	None
+	>>> print(say_my_name("Chee", None))
+	None
