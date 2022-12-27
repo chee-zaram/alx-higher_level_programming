@@ -1,0 +1,66 @@
+=========================
+Module ``4-print_square``
+=========================
+
+Tests for the functions ``print_square``
+----------------------------------------
+::
+	>>> print_square = __import__("4-print_square").print_square
+
+Expected inputs
+---------------
+::
+	>>> print_square(4) # doctest: +NORMALIZE_WHITESPACE
+	####
+	####
+	####
+	####
+
+	>>> print_square(2) # doctest: +NORMALIZE_WHITESPACE
+	##
+	##
+
+	>>> print_square(0)
+	<BLANKLINE>
+
+ValueErrors
+-----------
+::
+	>>> print_square(-1)
+	Traceback (most recent call last):
+		...
+	ValueError: size must be >= 0
+
+	>>> print_square(-5)
+	Traceback (most recent call last):
+		...
+	ValueError: size must be >= 0
+
+TypeErrors
+----------
+::
+	>>> print_square(3.1)
+	Traceback (most recent call last):
+		...
+	TypeError: size must be an integer
+
+	>>> print_square("4")
+	Traceback (most recent call last):
+		...
+	TypeError: size must be an integer
+
+	>>> print_square([10])
+	Traceback (most recent call last):
+		...
+	TypeError: size must be an integer
+
+	>>> print_square((1,))
+	Traceback (most recent call last):
+		...
+	TypeError: size must be an integer
+
+None
+----
+::
+	>>> print(print_square(None))
+	None
