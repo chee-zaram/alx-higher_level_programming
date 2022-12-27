@@ -1,0 +1,92 @@
+=============================
+Module ``5-text_indentation``
+=============================
+
+Tests for function ``text_indentation``
+=======================================
+::
+	>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+Expected inputs
+---------------
+::
+	>>> text_indentation("One time for the real ones. Who are they?")
+	One time for the real ones.
+	<BLANKLINE>
+	Who are they?
+	<BLANKLINE>
+
+	>>> text_indentation("Number one: always number one!")
+	Number one:
+	<BLANKLINE>
+	always number one!
+
+	>>> text_indentation("\nNew day?\n\nNew life.")
+	<BLANKLINE>
+	New day?
+	<BLANKLINE>
+	<BLANKLINE>
+	<BLANKLINE>
+	New life.
+	<BLANKLINE>
+
+Long text 
+---------
+::
+	>>> text_indentation("Neil Papworth, 22, of Great Britain sent the \
+	... first ever text message from his computer to a friend’s phone. \
+	... This holiday greeting didn’t feature a Santa Claus emoji.")
+	Neil Papworth, 22, of Great Britain sent the first ever text message from his computer to a friend’s phone.
+	<BLANKLINE>
+	This holiday greeting didn’t feature a Santa Claus emoji.
+	<BLANKLINE>
+
+Multiple spaces after special characters
+----------------------------------------
+::
+	>>> text_indentation("A.    B: 2 . Is this 3 ?   ")
+	A.
+	<BLANKLINE>
+	B:
+	<BLANKLINE>
+	2 .
+	<BLANKLINE>
+	Is this 3 ?
+	<BLANKLINE>
+
+No special character at end of text
+-----------------------------------
+::
+	>>> text_indentation("Does this end with a special character? I think not")
+	Does this end with a special character?
+	<BLANKLINE>
+	I think not
+
+Empty string
+-----------
+::
+	>>> text_indentation("")
+
+TypeErrors
+----------
+::
+	>>> text_indentation(["text"])
+	Traceback (most recent call last):
+		...
+	TypeError: text must be a string
+
+	>>> text_indentation({1: "first", 2: "second"})
+	Traceback (most recent call last):
+		...
+	TypeError: text must be a string
+
+	>>> text_indentation(10)
+	Traceback (most recent call last):
+		...
+	TypeError: text must be a string
+
+None
+----
+::
+	>>> print(text_indentation(None))
+	None
