@@ -71,9 +71,9 @@ def matrix_mul(m_a, m_b):
 
     # check that both matrices only contain integers or floats
     if not all(isinstance(n, (int, float)) for row in m_a for n in row):
-        raise TypeError("m_a should only contain integers or floats")
+        raise TypeError("m_a should contain only integers or floats")
     if not all(isinstance(n, (int, float)) for row in m_b for n in row):
-        raise TypeError("m_b should only contain integers or floats")
+        raise TypeError("m_b should contain only integers or floats")
 
     # get the length of each list in m_a and check m_a is a rectangle
     row_lens_in_a = [len(row) for row in m_a]

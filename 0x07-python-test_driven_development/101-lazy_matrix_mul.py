@@ -3,7 +3,7 @@
 
 This module contains the ``lazy_matrix_mul`` function
 """
-import numpy
+import numpy as np
 
 
 def lazy_matrix_mul(m_a, m_b):
@@ -17,4 +17,4 @@ def lazy_matrix_mul(m_a, m_b):
         Product of the two matrices
     """
 
-    return numpy.matmul(m_a, m_b)
+    return np.matmul(m_a, m_b)
