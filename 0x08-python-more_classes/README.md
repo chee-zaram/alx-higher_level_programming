@@ -3,7 +3,7 @@
 ---
 
 This directory contains solutions to tasks which aim to develop an understanding
-of classses and objects in Python in a way which helps answer the following questions:
+of classses and objects in Python in a way that helps answer the following questions:
 
 - Why Python programming is awesome?
 - What is OOP?
@@ -31,3 +31,6 @@ of classses and objects in Python in a way which helps answer the following ques
 - What is and what does contain **dict** of a class and of an instance of a class?
 - How does Python find the attributes of an object or class?
 - How to use the getattr function?
+
+> _NB: tasks 1-9 are based on the task before them. [9-rectangle.py](https://github.com/chee-zaram/alx-higher_level_programming/blob/main/0x08-python-more_classes/9-rectangle.py)
+> is the finished class_.
