@@ -22,10 +22,6 @@ class Rectangle:
         Rectangle.checkHeight(height)
         self.height = height
 
-    def __repr__(self):
-        """Returns the canonical string representation of ``Rectangle``"""
-        return f"Rectangle(width={self.__width}, height={self.__height})"
-
     def __str__(self):
         """Creates a new sting object from the given object"""
         rectangle = ""
