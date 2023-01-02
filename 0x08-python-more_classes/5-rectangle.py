@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This is the ``1-rectangle`` module
+This is the ``5-rectangle`` module
 
 It contains the class ``Rectangle``
 """
@@ -14,6 +14,8 @@ class Rectangle:
         checkHeight (int): Makes sure height has correct type and value
         width (int): Width of the rectangle
         height (int): Height of the rectangle
+        area: Returns the area of the current instance of the rectangle
+        perimeter: Returns perimeter of the current instance of rectangle
     """
 
     def __init__(self, width=0, height=0):
@@ -30,7 +32,21 @@ class Rectangle:
 
     def __repr__(self):
         """Returns the canonical string representation of ``Rectangle``"""
-        return f"Rectangle(width={self.__width}, height={self.__height})"
+        return f"Rectangle({self.__width}, {self.__height})"
+
+    def __str__(self):
+        """Creates a new sting object from the given object"""
+        rectangle = ""
+        if self.__width == 0 or self.__height == 0:
+            return rectangle
+
+        lines = ['#' * self.__width for _ in range(self.__height)]
+        rectangle = '\n'.join(lines)
+        return rectangle
+
+    def __del__(self):
+        """Prints a message when an instance of ``Rectangle`` is deleted"""
+        print("Bye rectangle...")
 
     @staticmethod
     def checkWidth(width):
@@ -83,3 +99,14 @@ class Rectangle:
     def height(self, value):
         Rectangle.checkHeight(value)
         self.__height = value
+
+    def area(self):
+        """Returns the rectangle area in a given instance"""
+        return self.__width * self.__height
+
+    def perimeter(self):
+        """Returns the perimeter of the rectangle in a given instance"""
+        if self.__width == 0 or self.__height == 0:
+            return 0
+
+        return 2 * (self.__width + self.__height)
