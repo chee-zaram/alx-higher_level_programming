@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This is the ``5-rectangle`` module
+This is the ``7-rectangle`` module
 
 It contains the class ``Rectangle``
 """
@@ -8,7 +8,14 @@ It contains the class ``Rectangle``
 
 class Rectangle:
     """class Rectangle that defines a rectangle based on width and height
+
+    Attributes:
+        number_of_instances (int): Number of instances of `Rectangle`
+        print_symbol: Symbol for string representation. Initialized to #
     """
+
+    number_of_instances = 0
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         """Initializes a new Rectangle with the given width and height
@@ -21,6 +28,7 @@ class Rectangle:
         self.width = width
         Rectangle.checkHeight(height)
         self.height = height
+        Rectangle.number_of_instances += 1
 
     def __repr__(self):
         """Returns the canonical string representation of ``Rectangle``"""
@@ -32,12 +40,16 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return rectangle
 
-        lines = ['#' * self.width for _ in range(self.height)]
+        lines = [str(self.print_symbol) * self.width
+                 for _ in range(self.height)]
         rectangle = '\n'.join(lines)
         return rectangle
 
     def __del__(self):
-        """Prints a message when an instance of ``Rectangle`` is deleted"""
+        """Prints a message when an instance of ``Rectangle`` is deleted
+            and decrements the count
+        """
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
 
     @staticmethod

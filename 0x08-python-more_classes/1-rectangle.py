@@ -8,12 +8,6 @@ It contains the class ``Rectangle``
 
 class Rectangle:
     """class Rectangle that defines a rectangle based on width and height
-
-    Attributes:
-        checkWidth (int): Makes sure width has correct type and value
-        checkHeight (int): Makes sure height has correct type and value
-        width (int): Width of the rectangle
-        height (int): Height of the rectangle
     """
 
     def __init__(self, width=0, height=0):
@@ -24,9 +18,9 @@ class Rectangle:
             height (int, optional): Height of the Rectangle. Defaults to 0
         """
         Rectangle.checkWidth(width)
-        self.__width = width
+        self.width = width
         Rectangle.checkHeight(height)
-        self.__height = height
+        self.height = height
 
     def __repr__(self):
         """Returns the canonical string representation of ``Rectangle``"""

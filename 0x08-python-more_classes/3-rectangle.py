@@ -8,14 +8,6 @@ It contains the class ``Rectangle``
 
 class Rectangle:
     """class Rectangle that defines a rectangle based on width and height
-
-    Attributes:
-        checkWidth (int): Makes sure width has correct type and value
-        checkHeight (int): Makes sure height has correct type and value
-        width (int): Width of the rectangle
-        height (int): Height of the rectangle
-        area: Returns the area of the current instance of the rectangle
-        perimeter: Returns perimeter of the current instance of rectangle
     """
 
     def __init__(self, width=0, height=0):
@@ -26,9 +18,9 @@ class Rectangle:
             height (int, optional): Height of the Rectangle. Defaults to 0
         """
         Rectangle.checkWidth(width)
-        self.__width = width
+        self.width = width
         Rectangle.checkHeight(height)
-        self.__height = height
+        self.height = height
 
     def __repr__(self):
         """Returns the canonical string representation of ``Rectangle``"""
@@ -37,10 +29,10 @@ class Rectangle:
     def __str__(self):
         """Creates a new sting object from the given object"""
         rectangle = ""
-        if self.__width == 0 or self.__height == 0:
+        if self.width == 0 or self.height == 0:
             return rectangle
 
-        lines = ['#' * self.__width for _ in range(self.__height)]
+        lines = ['#' * self.width for _ in range(self.height)]
         rectangle = '\n'.join(lines)
         return rectangle
 
@@ -98,11 +90,11 @@ class Rectangle:
 
     def area(self):
         """Returns the rectangle area in a given instance"""
-        return self.__width * self.__height
+        return self.width * self.height
 
     def perimeter(self):
         """Returns the perimeter of the rectangle in a given instance"""
-        if self.__width == 0 or self.__height == 0:
+        if self.width == 0 or self.height == 0:
             return 0
 
-        return 2 * (self.__width + self.__height)
+        return 2 * (self.width + self.height)
