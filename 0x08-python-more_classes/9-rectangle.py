@@ -30,27 +30,17 @@ class Rectangle:
         self.height = height
         Rectangle.number_of_instances += 1
 
-    def __repr__(self):
-        """Returns the canonical string representation of ``Rectangle``"""
-        return f"Rectangle({self.__width}, {self.__height})"
+    @classmethod
+    def square(cls, size=0):
+        """Class method that creates a new Rectangle instance
 
-    def __str__(self):
-        """Returns a new sting object from the given object"""
-        rectangle = ""
-        if self.width == 0 or self.height == 0:
-            return rectangle
+        Args:
+            size (int, optional): Size of the edges of the rectangle
 
-        lines = [str(self.print_symbol) * self.width
-                 for _ in range(self.height)]
-        rectangle = '\n'.join(lines)
-        return rectangle
-
-    def __del__(self):
-        """Prints a message when an instance of ``Rectangle`` is deleted
-        and decrements the number of instances
+        Returns:
+            A new rectangle with width == height == size
         """
-        Rectangle.number_of_instances -= 1
-        print("Bye rectangle...")
+        return cls(size, size)
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
@@ -77,22 +67,6 @@ class Rectangle:
         return rect_1
 
     @staticmethod
-    def checkWidth(width):
-        """Makes sure the width has correct type and value
-
-        Args:
-            width (int): Width to check
-
-        Raises:
-            TypeError: If `width` is not an `int`
-            ValueError: If `width` is < 0
-        """
-        if not isinstance(width, int):
-            raise TypeError("width must be an integer")
-        if width < 0:
-            raise ValueError("width must be >= 0")
-
-    @staticmethod
     def checkHeight(height):
         """Makes sure the height has correct type and value
 
@@ -108,27 +82,25 @@ class Rectangle:
         if height < 0:
             raise ValueError("height must be >= 0")
 
-    @classmethod
-    def square(cls, size=0):
-        """Class method that creates a new Rectangle instance
+    @staticmethod
+    def checkWidth(width):
+        """Makes sure the width has correct type and value
 
         Args:
-            size (int, optional): Size of the edges of the rectangle
+            width (int): Width to check
 
-        Returns:
-            A new rectangle with width == height == size
+        Raises:
+            TypeError: If `width` is not an `int`
+            ValueError: If `width` is < 0
         """
-        return cls(size, size)
+        if not isinstance(width, int):
+            raise TypeError("width must be an integer")
+        if width < 0:
+            raise ValueError("width must be >= 0")
 
-    @property
-    def width(self):
-        """int: The width of the rectangle"""
-        return self.__width
-
-    @width.setter
-    def width(self, value):
-        Rectangle.checkWidth(value)
-        self.__width = value
+    def area(self):
+        """Returns the rectangle area in a given instance"""
+        return self.width * self.height
 
     @property
     def height(self):
@@ -140,13 +112,41 @@ class Rectangle:
         Rectangle.checkHeight(value)
         self.__height = value
 
-    def area(self):
-        """Returns the rectangle area in a given instance"""
-        return self.width * self.height
-
     def perimeter(self):
         """Returns the perimeter of the rectangle in a given instance"""
         if self.width == 0 or self.height == 0:
             return 0
 
         return 2 * (self.width + self.height)
+
+    @property
+    def width(self):
+        """int: The width of the rectangle"""
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        Rectangle.checkWidth(value)
+        self.__width = value
+
+    def __str__(self):
+        """Returns a new sting object from the given object"""
+        rectangle = ""
+        if self.width == 0 or self.height == 0:
+            return rectangle
+
+        lines = [str(self.print_symbol) * self.width
+                 for _ in range(self.height)]
+        rectangle = '\n'.join(lines)
+        return rectangle
+
+    def __repr__(self):
+        """Returns the canonical string representation of ``Rectangle``"""
+        return f"Rectangle({self.__width}, {self.__height})"
+
+    def __del__(self):
+        """Prints a message when an instance of ``Rectangle`` is deleted
+        and decrements the number of instances
+        """
+        Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
