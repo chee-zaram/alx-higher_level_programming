@@ -33,14 +33,11 @@ def add_integer(a, b=98):
         >>> add_integer(-3.2, 45.6)
         42
     """
-    # make sure we are not given None as arguments
-    if a is not None and b is not None:
+    # check for invalid types
+    if type(a) not in [int, float]:
+        raise TypeError("a must be an integer")
+    if type(b) not in [int, float]:
+        raise TypeError("b must be an integer")
 
-        # check for invalid types
-        if type(a) not in [int, float]:
-            raise TypeError("a must be an integer")
-        if type(b) not in [int, float]:
-            raise TypeError("b must be an integer")
-
-        # return sum of the integers
-        return int(a) + int(b)
+    # return sum of the integers
+    return int(a) + int(b)
