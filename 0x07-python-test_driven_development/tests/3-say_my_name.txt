@@ -50,6 +50,16 @@ None
 ----
 ::
 	>>> print(say_my_name(None, "Okeke"))
-	None
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
+
 	>>> print(say_my_name("Chee", None))
-	None
+	Traceback (most recent call last):
+		...
+	TypeError: last_name must be a string
+
+	>>> print(say_my_name(None, None))
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
