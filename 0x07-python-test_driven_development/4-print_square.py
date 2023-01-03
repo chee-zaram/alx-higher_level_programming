@@ -16,17 +16,15 @@ def print_square(size):
         ValueError: If size is less than zero
     """
 
-    # make sure we do not deal with None argument
-    if size is not None:
-        # make sure size is an integer
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
+    # make sure size is an integer
+    if not isinstance(size, int):
+        raise TypeError("size must be an integer")
 
-        # make sure size is a valid value
-        if size < 0:
-            raise ValueError("size must be >= 0")
+    # make sure size is a valid value
+    if size < 0:
+        raise ValueError("size must be >= 0")
 
-        for _ in range(size):
-            print('#' * size)
-        if size == 0:
-            print()
+    for _ in range(size):
+        print('#' * size)
+    if size == 0:
+        print()

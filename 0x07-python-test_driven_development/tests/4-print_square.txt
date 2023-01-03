@@ -63,4 +63,6 @@ None
 ----
 ::
 	>>> print(print_square(None))
-	None
+	Traceback (most recent call last):
+		...
+	TypeError: size must be an integer
