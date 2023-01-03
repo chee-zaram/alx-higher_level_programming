@@ -28,10 +28,6 @@ def matrix_divided(matrix, div):
     [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0
     """
 
-    # make sure we do not get None type
-    if matrix is None:
-        return None
-
     # checking if matrix is a list of lists
     if not isinstance(matrix, list) or not all(isinstance(row, (list, tuple))
                                                for row in matrix):

@@ -53,7 +53,9 @@ TypeError
 	TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 	>>> print(matrix_divided(None, None))
-	None
+	Traceback (most recent call last):
+		...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 	>>> print(matrix_divided([[1, None], None], 1))
 	Traceback (most recent call last):
