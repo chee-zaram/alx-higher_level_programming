@@ -89,4 +89,6 @@ None
 ----
 ::
 	>>> print(text_indentation(None))
-	None
+	Traceback (most recent call last):
+		...
+	TypeError: text must be a string

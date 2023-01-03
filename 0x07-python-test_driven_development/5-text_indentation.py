@@ -22,16 +22,14 @@ def text_indentation(text):
     <BLANKLINE>
     """
 
-    # check that text is valid
-    if text is not None:
-        if not isinstance(text, str):
-            raise TypeError("text must be a string")
+    if not isinstance(text, str):
+        raise TypeError("text must be a string")
 
-        # loop through for each special_char and replace with newlines
-        for special_char in ('.', '?', ':'):
-            text = (special_char + ('\n' * 2)).join(
-                    [line.lstrip(' ') for line in text.split(special_char)]
-                    )
+    # loop through for each special_char and replace with newlines
+    for special_char in ('.', '?', ':'):
+        text = (special_char + ('\n' * 2)).join(
+                [line.lstrip(' ') for line in text.split(special_char)]
+                )
 
-        # print newly formed string
-        print("{}".format(text), end='')
+    # print newly formed string
+    print("{}".format(text), end='')
