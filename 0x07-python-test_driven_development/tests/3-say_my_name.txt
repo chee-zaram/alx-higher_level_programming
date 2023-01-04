@@ -63,3 +63,11 @@ None
 	Traceback (most recent call last):
 		...
 	TypeError: first_name must be a string
+
+Missing arguments
+-----------------
+::
+	>>> print(say_my_name())
+	Traceback (most recent call last):
+		...
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
