@@ -11,9 +11,15 @@ def add_attribute(obj, attr_name, attr_value):
         attr_value: The value of the attribute to add.
 
     Raises:
-        TypeError: if the new attribute could not be added
+        TypeError: if a new attribute could not be added
     """
-    if not hasattr(obj, '__slots__') and not hasattr(obj, '__dict__'):
+    # check that the object can store key value pairs like most classes do
+    if not hasattr(obj, '__dict__'):
+        raise TypeError("can't add new attribute")
+
+    # check if attribute addition is restricted, if so, check if our attribute
+    # name is in the list of allowed names
+    if hasattr(obj, '__slots__') and attr_name not in obj.__slots__:
         raise TypeError("can't add new attribute")
 
     setattr(obj, attr_name, attr_value)
