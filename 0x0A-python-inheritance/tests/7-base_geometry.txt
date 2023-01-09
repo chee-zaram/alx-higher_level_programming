@@ -44,12 +44,12 @@ Tests
 	>>> baseG.integer_validator("average")
 	Traceback (most recent call last):
 		...
-	TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 	>>> baseG.integer_validator()
 	Traceback (most recent call last):
 		...
-	TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 	>>> baseG.integer_validator("NaN", float('nan'))
 	Traceback (most recent call last):
