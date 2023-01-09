@@ -77,3 +77,9 @@ Contains more advanced tasks with regards to implementing and using classes and 
 ---
 
 Understanding fundamentally how everything in Python works as an object. [click]()
+
+## Python - Inheritance
+
+---
+
+Understanding and applying the concept of inheritance in Python. [click]()
