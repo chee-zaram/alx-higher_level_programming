@@ -2,7 +2,7 @@
 ``1-my_list`` module
 ====================
 
-Tests for the class ``MyList`` which Inherits from the class ``list``
+Tests for the class ``MyList`` which Inherits the class ``list``
 ---------------------------------------------------------------------
 
 Import module
@@ -26,16 +26,19 @@ Sort empty
 Pass string as argument and print
 ---------------------------------
 ::
-	>>> another = MyList("abcd")
-	>>> print(another)
+	>>> myList = MyList("acbd")
+	>>> myList
+	['a', 'c', 'b', 'd']
+	>>> myList.print_sorted()
 	['a', 'b', 'c', 'd']
 
 Pass list as argument and sort
 ------------------------------
 ::
-	>>> another = MyList([2, 4, 1])
-	>>> another.sort()
-	>>> print(another)
+	>>> myList = MyList([2, 4, 1])
+	>>> myList
+	[2, 4, 1]
+	>>> myList.print_sorted()
 	[1, 2, 4]
 
 Use print_sorted method
@@ -46,7 +49,7 @@ Use print_sorted method
 	>>> myList.append(2)
 	>>> myList.append(8)
 	>>> myList.append(2)
-	>>> print(myList)
-	[1, 5, 2, 8, 2]
+	>>> myList
+	[2, 4, 1, 1, 5, 2, 8, 2]
 	>>> myList.print_sorted()
-	[1, 2, 2, 5, 8]
+	[1, 1, 2, 2, 2, 4, 5, 8]
