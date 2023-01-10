@@ -83,3 +83,7 @@ Understanding fundamentally how everything in Python works as an object. [click]
 ---
 
 Understanding and applying the concept of inheritance in Python. [click]()
+
+## Python - Input/Output
+
+Understanding how to work with files from within a Python programme. [click]()
