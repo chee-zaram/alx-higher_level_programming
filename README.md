@@ -68,7 +68,7 @@ Learning about Object Oriented Programming (OOB) in Python. [click](https://gith
 
 ---
 
-Contains more advanced tasks with regards to implementing and using classes and objects in Python. [click]()
+Contains more advanced tasks with regards to implementing and using classes and objects in Python. [click](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x08-python-more_classes)
 
 ---
 
@@ -76,14 +76,14 @@ Contains more advanced tasks with regards to implementing and using classes and 
 
 ---
 
-Understanding fundamentally how everything in Python works as an object. [click]()
+Understanding fundamentally how everything in Python works as an object. [click](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x09-python-everything_is_object)
 
 ## Python - Inheritance
 
 ---
 
-Understanding and applying the concept of inheritance in Python. [click]()
+Understanding and applying the concept of inheritance in Python. [click](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x0A-python-inheritance)
 
 ## Python - Input/Output
 
-Understanding how to work with files from within a Python programme. [click]()
+Understanding how to work with files from within a Python programme. [click](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x0B-python-input_output)
