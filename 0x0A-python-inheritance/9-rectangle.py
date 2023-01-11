@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """Module ``9-rectangle``"""
-
-
 baseG = __import__("7-base_geometry").BaseGeometry
 
 
