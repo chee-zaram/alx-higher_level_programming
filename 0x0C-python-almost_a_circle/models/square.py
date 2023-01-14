@@ -65,7 +65,7 @@ class Square(Rectangle):
             kwargs (dict): Key word arguments
         """
 
-        attrs = ['id', 'size', 'x', 'y']
+        attrs = ('id', 'size', 'x', 'y')
         if len(args) > 0:
             for idx in range(len(args)):
                 setattr(self, attrs[idx], args[idx])

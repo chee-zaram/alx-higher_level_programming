@@ -2,7 +2,7 @@
 """Module ``base``"""
 
 import json
-# import csv
+import csv
 from os import path
 
 
@@ -41,12 +41,12 @@ class Base:
             An instance with all attributes set
         """
         if cls.__name__ == "Rectangle":
-            tempClass = cls(True, True)
+            temp_instance = cls(True, True)
         elif cls.__name__ == "Square":
-            tempClass = cls(True)
+            temp_instance = cls(True)
 
-        tempClass.update(**dictionary)
-        return tempClass
+        temp_instance.update(**dictionary)
+        return temp_instance
 
     @staticmethod
     def from_json_string(json_string):
@@ -84,6 +84,46 @@ class Base:
                 ))
 
         list_of_instances = [cls.create(**a_dict) for a_dict in list_of_dicts]
+
+        return list_of_instances
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Deserialize key/value pairs for several instances of `Base`"""
+
+        filename = cls.__name__ + ".csv"
+        list_of_instances = []
+        if not path.exists(filename) or not path.isfile(filename):
+            return list_of_instances
+
+        with open(filename, 'r') as csvfile:
+            if cls.__name__ == "Rectangle":
+                attrs = ("id", "width", "height", "x", "y")
+            elif cls.__name__ == "Square":
+                attrs = ("id", "size", "x", "y")
+
+            rows = csv.reader(csvfile, delimiter=',')
+            for idx, row in enumerate(rows):
+                if idx == 0:
+                    continue
+
+                temp_instance = cls(True, True)
+                for attr_idx, attr_value in enumerate(row):
+                    if attr_idx == len(attrs):
+                        raise AttributeError("Too many attributes given")
+
+                    # if rows not in attrs:
+                    #     raise AttributeError("Invalid attribute given")
+
+                    if attr_value:
+                        try:
+                            val = int(attr_value)
+                            setattr(temp_instance, attrs[attr_idx], int(val))
+                        except (TypeError, ValueError) as e:
+                            raise e("Unable to set attribute")
+
+                list_of_instances.append(temp_instance)
+
         return list_of_instances
 
     @staticmethod
@@ -116,7 +156,9 @@ class Base:
         obj_str = "[]"
         filename = cls.__name__ + ".json"
 
-        if list_objs and type(list_objs) == list:
+        if list_objs and type(list_objs) == list and all(
+                isinstance(obj, cls) for obj in list_objs
+                ):
             obj_str = cls.to_json_string(
                     [obj.to_dictionary() for obj in list_objs]
                     )
@@ -131,4 +173,21 @@ class Base:
         Args:
             list_objs (list): List of objects
         """
-        pass
+
+        filename = cls.__name__ + ".csv"
+
+        if list_objs and type(list_objs) == list and all(
+                isinstance(obj, cls) for obj in list_objs
+                ):
+            obj_dicts = [obj.to_dictionary() for obj in list_objs]
+        else:
+            list_objs = []
+            obj_dicts = [{}]
+
+        with open(filename, 'w', newline='') as csvfile:
+            if cls.__name__ == "Rectangle":
+                attrs = ("id", "width", "height", "x", "y")
+            elif cls.__name__ == "Square":
+                attrs = ("id", "size", "x", "y")
+            csv.DictWriter(csvfile, fieldnames=attrs).writeheader()
+            csv.DictWriter(csvfile, fieldnames=attrs).writerows(obj_dicts)
