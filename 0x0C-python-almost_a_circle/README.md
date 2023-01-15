@@ -2,7 +2,8 @@
 
 ---
 
-A Python project that helps to teach how to use carry out unittests in large projects.
+A Python project that helps to teach how to carry out unittests in a project with
+a fairly large code base.
 The aim of this project was to answer the following questions using code solutions:
 
 - What is Unit testing and how to implement it in a large project?

@@ -89,8 +89,7 @@ class Rectangle(Base):
         for _ in range(self.height):
             display_rectangle += (' ' * self.x) + ('#' * self.width) + '\n'
 
-        stdout.write(display_rectangle)
-        stdout.flush()
+        print(display_rectangle, end='')
 
     @property
     def height(self):
@@ -122,10 +121,10 @@ class Rectangle(Base):
         """Assigns an argument to each of the attributes"""
 
         attrs = ('id', 'width', 'height', 'x', 'y')
-        if len(args) > 0:
+        if args and len(args) > 0:
             for idx in range(len(args)):
                 setattr(self, attrs[idx], args[idx])
-        elif len(kwargs) > 0:
+        elif kwargs and len(kwargs) > 0:
             for attr in filter(lambda attr: attr in kwargs, attrs):
                 setattr(self, attr, kwargs[attr])
 

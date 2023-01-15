@@ -19,7 +19,8 @@ class Base:
         """Initializes variables for every instance of the `Base` class
 
         Args:
-            id (int): It is assumed that `id` will always be an integer
+            id (int): It is assumed that `id` will always be an integer.
+                Defaults to `None`
         """
         if not isinstance(id, int) and id is not None:
             raise TypeError("'id' must be an integer")
@@ -60,6 +61,7 @@ class Base:
         """
         if not json_string:
             return []
+
         return json.loads(json_string)
 
     @classmethod
@@ -189,5 +191,6 @@ class Base:
                 attrs = ("id", "width", "height", "x", "y")
             elif cls.__name__ == "Square":
                 attrs = ("id", "size", "x", "y")
+
             csv.DictWriter(csvfile, fieldnames=attrs).writeheader()
             csv.DictWriter(csvfile, fieldnames=attrs).writerows(obj_dicts)
