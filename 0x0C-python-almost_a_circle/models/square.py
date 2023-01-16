@@ -38,7 +38,7 @@ class Square(Rectangle):
         Args:
             value (int): Value of the width and height
         """
-        return self.height
+        return self.width
 
     @size.setter
     def size(self, value):
@@ -66,9 +66,9 @@ class Square(Rectangle):
         """
 
         attrs = ('id', 'size', 'x', 'y')
-        if len(args) > 0:
+        if args and len(args) > 0 and len(args) <= len(attrs):
             for idx in range(len(args)):
                 setattr(self, attrs[idx], args[idx])
-        elif len(kwargs) > 0:
+        elif kwargs and len(kwargs) > 0:
             for attr in filter(lambda attr: attr in kwargs, attrs):
                 setattr(self, attr, kwargs[attr])

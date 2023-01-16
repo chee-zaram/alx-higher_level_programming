@@ -22,7 +22,7 @@ class Base:
             id (int): It is assumed that `id` will always be an integer.
                 Defaults to `None`
         """
-        if not isinstance(id, int) and id is not None:
+        if id is not None and type(id) != int:
             raise TypeError("'id' must be an integer")
 
         if id is not None:
@@ -42,9 +42,9 @@ class Base:
             An instance with all attributes set
         """
         if cls.__name__ == "Rectangle":
-            temp_instance = cls(True, True)
+            temp_instance = cls(1, 1)
         elif cls.__name__ == "Square":
-            temp_instance = cls(True)
+            temp_instance = cls(1)
 
         temp_instance.update(**dictionary)
         return temp_instance
@@ -61,6 +61,9 @@ class Base:
         """
         if not json_string:
             return []
+
+        if type(json_string) != str:
+            raise TypeError("'json_string' must be a string")
 
         return json.loads(json_string)
 
@@ -79,7 +82,7 @@ class Base:
         list_of_dicts = cls.from_json_string(json_string)
 
         if type(list_of_dicts) != list or not all(
-                isinstance(item, dict) for item in list_of_dicts
+                type(item) == dict for item in list_of_dicts
                 ):
             raise TypeError("{} doesn't contain a list of dictionaries".format(
                 filename
@@ -109,7 +112,7 @@ class Base:
                 if idx == 0:
                     continue
 
-                temp_instance = cls(True, True)
+                temp_instance = cls(1, 1)
                 for attr_idx, attr_value in enumerate(row):
                     if attr_idx == len(attrs):
                         raise AttributeError("Too many attributes given")
@@ -159,7 +162,7 @@ class Base:
         filename = cls.__name__ + ".json"
 
         if list_objs and type(list_objs) == list and all(
-                isinstance(obj, cls) for obj in list_objs
+                type(obj) == cls for obj in list_objs
                 ):
             obj_str = cls.to_json_string(
                     [obj.to_dictionary() for obj in list_objs]
@@ -179,7 +182,7 @@ class Base:
         filename = cls.__name__ + ".csv"
 
         if list_objs and type(list_objs) == list and all(
-                isinstance(obj, cls) for obj in list_objs
+                type(obj) == cls for obj in list_objs
                 ):
             obj_dicts = [obj.to_dictionary() for obj in list_objs]
         else:

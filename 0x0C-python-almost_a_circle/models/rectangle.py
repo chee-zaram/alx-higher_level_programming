@@ -5,7 +5,6 @@ Contains the class ``Rectangle`` that defines a rectangle
 """
 
 from models.base import Base
-from sys import stdout
 
 
 class Rectangle(Base):
@@ -57,7 +56,7 @@ class Rectangle(Base):
             TypeError: if `value` is not an integer
             ValueError: if `name` is `width` or `height` and `value` <= 0
         """
-        if not isinstance(value, int):
+        if type(value) != int:
             raise TypeError("{:s} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{:s} must be > 0".format(name))
@@ -74,7 +73,7 @@ class Rectangle(Base):
             TypeError: if `value` is not an integer
             ValueError: if `name` is `x` or `y` and `value` < 0
         """
-        if not isinstance(value, int):
+        if type(value) != int:
             raise TypeError("{:s} must be an integer".format(name))
         if value < 0:
             raise ValueError("{:s} must be >= 0".format(name))
@@ -121,7 +120,7 @@ class Rectangle(Base):
         """Assigns an argument to each of the attributes"""
 
         attrs = ('id', 'width', 'height', 'x', 'y')
-        if args and len(args) > 0:
+        if args and len(args) > 0 and len(args) <= len(attrs):
             for idx in range(len(args)):
                 setattr(self, attrs[idx], args[idx])
         elif kwargs and len(kwargs) > 0:

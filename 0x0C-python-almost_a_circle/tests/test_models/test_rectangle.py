@@ -300,6 +300,59 @@ class TestRectangle(unittest.TestCase):
             rect1.update(y=-1)
         self.assertEqual(str(e.exception), 'y must be >= 0')
 
+        # args exist and is not empty
+        self.assertEqual(rect1.width, 5)
+        rect1.update(1, 2, id=4, width=3)
+        self.assertEqual(rect1.id, 1)
+        self.assertEqual(rect1.width, 2)
+
+        # args does not exist
+        args = None
+        self.assertEqual(rect1.id, 1)
+        with self.assertRaises(TypeError) as e:
+            rect1.update(*args, id=4, width=3, height=2)
+        self.assertEqual(str(e.exception),
+                         "models.rectangle.Rectangle.update() argument after "
+                         "* must be an iterable, not NoneType"
+                         )
+
+        # args exist and is empty
+        args = []
+        rect1.update(*args, id=4, width=3, height=2)
+        self.assertEqual(rect1.id, 4)
+        self.assertEqual(rect1.width, 3)
+        self.assertEqual(rect1.height, 2)
+
+        # args has too many arguments
+        args = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        rect1.update(*args)
+        self.assertEqual(rect1.id, 4)
+
+        # args contains a non int
+        args = [1, '2']
+        with self.assertRaises(TypeError) as e:
+            rect1.update(*args)
+        self.assertEqual(str(e.exception), 'width must be an integer')
+
+    def test_to_dictionary(self):
+        """Test for the public method `to_dictionary`.
+
+        Returns the dictionary representation of a `Rectangle`
+        """
+
+        rect1 = Rectangle(2, 1, 2, 1, 2)
+        the_dict = {'id': 2, 'width': 2, 'height': 1, 'x': 2, 'y': 1}
+        self.assertEqual(rect1.to_dictionary(), the_dict)
+
+        rect1.update(id=3, x=6)
+        the_dict = {'id': 3, 'width': 2, 'height': 1, 'x': 6, 'y': 1}
+        self.assertEqual(rect1.to_dictionary(), the_dict)
+
+        args = [8, 9]
+        rect1.update(*args)
+        the_dict = {'id': 8, 'width': 9, 'height': 1, 'x': 6, 'y': 1}
+        self.assertEqual(rect1.to_dictionary(), the_dict)
+
 
 if __name__ == "__main__":
     unittest.main()
