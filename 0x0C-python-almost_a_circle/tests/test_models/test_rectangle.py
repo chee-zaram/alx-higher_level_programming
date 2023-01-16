@@ -105,9 +105,10 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError) as e:
             Rectangle(height=1)
         self.assertEqual(
-            "Rectangle.__init__() missing 1 required positional argument: "
-            "'width'", str(e.exception)
-            )
+                str(e.exception),
+                "__init__() missing 1 required positional argument: "
+                "'width'", str(e.exception)
+                )
 
         # Missing argument
         # with self.assertRaises(SyntaxError):
@@ -152,14 +153,14 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError) as e:
             Rectangle(1, )
         self.assertEqual(
-            "Rectangle.__init__() missing 1 required positional argument: "
-            "'height'", str(e.exception)
-            )
+                str(e.exception),
+                "__init__() missing 1 required positional argument: 'height'"
+                )
 
         with self.assertRaises(TypeError) as e:
             Rectangle()
         self.assertEqual(
-            "Rectangle.__init__() missing 2 required positional arguments: "
+            "__init__() missing 2 required positional arguments: "
             "'width' and 'height'", str(e.exception)
             )
 
@@ -250,7 +251,7 @@ class TestRectangle(unittest.TestCase):
             rect1.area(1)
         self.assertEqual(
                 str(e.exception),
-                "Rectangle.area() takes 1 positional argument but 2 were given"
+                "area() takes 1 positional argument but 2 were given"
                 )
 
     @patch('builtins.print')
@@ -270,8 +271,7 @@ class TestRectangle(unittest.TestCase):
             rect1.display(1)
         self.assertEqual(
                 str(e.exception),
-                "Rectangle.display() takes 1 positional argument "
-                "but 2 were given"
+                "display() takes 1 positional argument but 2 were given"
                 )
 
     def test_str(self):
@@ -311,10 +311,10 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rect1.id, 1)
         with self.assertRaises(TypeError) as e:
             rect1.update(*args, id=4, width=3, height=2)
-        self.assertEqual(str(e.exception),
-                         "models.rectangle.Rectangle.update() argument after "
-                         "* must be an iterable, not NoneType"
-                         )
+        self.assertEqual(
+                str(e.exception),
+                "update() argument after * must be a sequence, not NoneType"
+                )
 
         # args exist and is empty
         args = []

@@ -107,7 +107,7 @@ class TestSquare(unittest.TestCase):
         with self.assertRaises(TypeError) as e:
             Square(x=1)
         self.assertEqual(
-            "Square.__init__() missing 1 required positional argument: "
+            "__init__() missing 1 required positional argument: "
             "'size'", str(e.exception)
             )
 
@@ -242,10 +242,10 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(sq1.id, 1)
         with self.assertRaises(TypeError) as e:
             sq1.update(*args, id=4)
-        self.assertEqual(str(e.exception),
-                         "models.square.Square.update() argument after "
-                         "* must be an iterable, not NoneType"
-                         )
+        self.assertEqual(
+                str(e.exception),
+                "update() argument after * must be a sequence, not NoneType"
+                )
 
         # args exist and is empty
         args = []

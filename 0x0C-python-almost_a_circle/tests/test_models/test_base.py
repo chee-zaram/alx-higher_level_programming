@@ -152,14 +152,14 @@ class TestBase(unittest.TestCase):
     def test_to_json_string_2(self):
         """Test with invalid number of arguments"""
 
-        msg = "Base.to_json_string() missing 1 required positional argument: "\
+        msg = "to_json_string() missing 1 required positional argument: "\
               + "'list_dictionaries'"
 
         with self.assertRaises(TypeError) as e:
             Base.to_json_string()
         self.assertEqual(str(e.exception), msg)
 
-        msg = "Base.to_json_string() takes 1 positional argument " + \
+        msg = "to_json_string() takes 1 positional argument " + \
             "but 2 were given"
 
         with self.assertRaises(TypeError) as e:
@@ -212,13 +212,13 @@ class TestBase(unittest.TestCase):
     def test_save_to_file_1(self):
         """Test with wrong number of arguments"""
 
-        msg = "Base.save_to_file() missing 1 required" + \
+        msg = "save_to_file() missing 1 required" + \
               " positional argument: 'list_objs'"
 
         with self.assertRaises(TypeError) as e:
             Rectangle.save_to_file()
         self.assertEqual(msg, str(e.exception))
-        err_msg = "Base.save_to_file() takes 2 positional " + \
+        err_msg = "save_to_file() takes 2 positional " + \
                   "arguments but 3 were given"
 
         with self.assertRaises(TypeError) as e:
@@ -269,12 +269,12 @@ class TestBase(unittest.TestCase):
     def test_from_json_string_2(self):
         """Test with invalid number of arguments"""
 
-        err_msg = "Base.from_json_string() missing 1 required " + \
+        err_msg = "from_json_string() missing 1 required " + \
                   "positional argument: 'json_string'"
         with self.assertRaises(TypeError) as e:
             Rectangle.from_json_string()
         self.assertEqual(err_msg, str(e.exception))
-        err_msg = "Base.from_json_string() takes 1 positional argument " + \
+        err_msg = "from_json_string() takes 1 positional argument " + \
             "but 2 were given"
         with self.assertRaises(TypeError) as e:
             Rectangle.from_json_string("Hi", 98)
@@ -303,7 +303,7 @@ class TestBase(unittest.TestCase):
             rect2 = "A string"
             Rectangle.create(rect2)
         self.assertEqual(
-            "Base.create() takes 1 positional argument but 2 were given",
+            "create() takes 1 positional argument but 2 were given",
             str(e.exception))
 
     def test_load_from_file_0(self):
@@ -342,7 +342,7 @@ class TestBase(unittest.TestCase):
     def test_load_from_file_2(self):
         """Test class method load_from_file with wrong args."""
 
-        s = "Base.load_from_file() takes 1 positional argument but " + \
+        s = "load_from_file() takes 1 positional argument but " + \
             "2 were given"
         with self.assertRaises(TypeError) as e:
             Rectangle.load_from_file("Hello")
@@ -367,12 +367,12 @@ class TestBase(unittest.TestCase):
     def test_save_and_load_csv_2(self):
         """Test class method save_to_file_csv with wrong args."""
 
-        err_msg = "Base.save_to_file_csv() missing 1 required" + \
+        err_msg = "save_to_file_csv() missing 1 required" + \
                   " positional argument: 'list_objs'"
         with self.assertRaises(TypeError) as e:
             Rectangle.save_to_file_csv()
         self.assertEqual(err_msg, str(e.exception))
-        err_msg = "Base.save_to_file_csv() takes 2 positional arguments " + \
+        err_msg = "save_to_file_csv() takes 2 positional arguments " + \
                   "but 3 were given"
         with self.assertRaises(TypeError) as e:
             Rectangle.save_to_file_csv([Rectangle(9, 4), Rectangle(8, 9)], 98)
@@ -414,7 +414,7 @@ class TestBase(unittest.TestCase):
     def test_save_and_load_csv_5(self):
         """Test class method load_from_file_csv with wrong args."""
 
-        s = "Base.load_from_file_csv() takes 1 positional argument " + \
+        s = "load_from_file_csv() takes 1 positional argument " + \
             "but 2 were given"
         with self.assertRaises(TypeError) as e:
             Rectangle.load_from_file_csv("Hello")
