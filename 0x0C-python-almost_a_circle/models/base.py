@@ -45,6 +45,9 @@ class Base:
             temp_instance = cls(1, 1)
         elif cls.__name__ == "Square":
             temp_instance = cls(1)
+        else:
+            raise AttributeError("{} is not a valid class".format(
+                cls.__name__))
 
         temp_instance.update(**dictionary)
         return temp_instance
@@ -106,6 +109,8 @@ class Base:
                 attrs = ("id", "width", "height", "x", "y")
             elif cls.__name__ == "Square":
                 attrs = ("id", "size", "x", "y")
+            else:
+                return list_of_instances
 
             rows = csv.reader(csvfile, delimiter=',')
             for idx, row in enumerate(rows):
@@ -124,8 +129,8 @@ class Base:
                         try:
                             val = int(attr_value)
                             setattr(temp_instance, attrs[attr_idx], int(val))
-                        except (TypeError, ValueError) as e:
-                            raise e("Unable to set attribute")
+                        except (TypeError, ValueError):
+                            raise
 
                 list_of_instances.append(temp_instance)
 
@@ -194,6 +199,9 @@ class Base:
                 attrs = ("id", "width", "height", "x", "y")
             elif cls.__name__ == "Square":
                 attrs = ("id", "size", "x", "y")
+            else:
+                raise AttributeError("{} is not a valid class".format(
+                    cls.__name__))
 
             csv.DictWriter(csvfile, fieldnames=attrs).writeheader()
             csv.DictWriter(csvfile, fieldnames=attrs).writerows(obj_dicts)
