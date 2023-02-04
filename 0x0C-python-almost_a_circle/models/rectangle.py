@@ -41,8 +41,8 @@ class Rectangle(Base):
     def __str__(self):
         """Returns a string represantation of the class"""
         return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
-                self.id, self.x, self.y, self.width, self.height
-                )
+            self.id, self.x, self.y, self.width, self.height
+        )
 
     @staticmethod
     def validate_width_and_height(value, name):
@@ -109,12 +109,12 @@ class Rectangle(Base):
         """Returns the dictionary represantation of a `Rectangle` instance"""
 
         return {
-                'id': self.id,
-                'width': self.width,
-                'height': self.height,
-                'x': self.x,
-                'y': self.y,
-            }
+            'id': self.id,
+            'width': self.width,
+            'height': self.height,
+            'x': self.x,
+            'y': self.y,
+        }
 
     def update(self, *args, **kwargs):
         """Assigns an argument to each of the attributes"""
