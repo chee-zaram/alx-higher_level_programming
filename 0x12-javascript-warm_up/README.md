@@ -22,3 +22,5 @@ using code solutions:
 - What are the arithmetic operators and how are they used?
 - How are dictionaries manipulated?
 - How are files imported in JavaScript?
+
+> For all `.js` files, linting is done using [semistandard](https://github.com/standard/semistandard).

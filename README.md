@@ -88,4 +88,7 @@ We do some more advanced quering and operations on databases.
 
 ---
 
-### [JavaScript - Warm Up]()
+### [JavaScript - Warm Up](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x12-javascript-warm_up)
+
+This project teaches JavaScript syntax and the basic operations that can be performed
+using JavaScript which are similar to other languages.
