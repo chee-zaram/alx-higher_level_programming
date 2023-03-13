@@ -6,90 +6,86 @@ This repo contains mainly projects done with the Python programming language in
 fullfilment of requirements for completing the Software Engineering programme
 at Holberton School, presented by ALX.
 
----
+### [Python - Hello, World](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x00-python-hello_world)
 
-## Python - Hello, World
-
----
-
-Basics of Python, focusing on string manipulation. [click](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x00-python-hello_world).
+Basics of Python, focusing on string manipulation.
 
 ---
 
-## Python - if/else, loops, functions
+### [Python - if/else, loops, functions](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x01-python-if_else_loops_functions)
+
+Using conditional statements and loops within Python programmers.
 
 ---
 
-Using conditional statements and loops within Python programmers. [click](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x01-python-if_else_loops_functions).
+### [Python - import & modules](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x02-python-import_modules)
+
+Importing names and variables from modules and making use of them. Using the `dir()` built-in.
 
 ---
 
-## Python - import & modules
+### [Python - Data Structures: Lists, Tuples](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x03-python-data_structures)
+
+Introduction to using data structures in Python.
 
 ---
 
-Importing names and variables from modules and making use of them. Using the `dir()` built-in. [click](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x02-python-import_modules).
+### [Python - More Data Structures: Set, Dictionary](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x04-python-more_data_structures)
+
+Here, we solve tasks that help us master the concepts of **dictionaries**, **set**, the **lambda** function, **map**, **reduce** and **filter** functions, and how to use them.
 
 ---
 
-## Python - Data Structures: Lists, Tuples
+### [Python - Exceptions](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x05-python-exceptions)
+
+Error and exception handling during during programme run.
 
 ---
 
-Introduction to using data structures in Python. [click](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x03-python-data_structures).
+### [Python - Classes and Objects](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x06-python-classes)
+
+Learning about Object Oriented Programming (OOB) in Python.
 
 ---
 
-## Python - More Data Structures: Set, Dictionary
+### [Python - More Classes and Objects](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x08-python-more_classes)
+
+Contains more advanced tasks with regards to implementing and using classes and objects in Python.
 
 ---
 
-Here, we solve tasks that help us master the concepts of **dictionaries**, **set**, the **lambda** function, **map**, **reduce** and **filter** functions, and how to use them. [click](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x04-python-more_data_structures).
+### [Python - Everything is Object](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x09-python-everything_is_object)
+
+Understanding fundamentally how everything in Python works as an object.
+
+### [Python - Inheritance](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x0A-python-inheritance)
+
+Understanding and applying the concept of inheritance in Python.
 
 ---
 
-## Python - Exceptions
+### [Python - Input/Output](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x0B-python-input_output)
+
+Understanding how to work with files from within a Python programme.
 
 ---
 
-Error and exception handling during during programme run. [click](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x05-python-exceptions)
+### [Python - Almost a Circle](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x0C-python-almost_a_circle)
+
+Learning to implement unittest in large projects.
 
 ---
 
-## Python - Classes and Objects
+### [SQL - Introduction](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x0D-SQL_introduction)
+
+Learning the basics of quering databases uses SQL syntax.
 
 ---
 
-Learning about Object Oriented Programming (OOB) in Python. [click](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x06-python-classes)
+### [SQL - More Queries](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x0E-SQL_more_queries)
+
+We do some more advanced quering and operations on databases.
 
 ---
 
-## Python - More Classes and Objects
-
----
-
-Contains more advanced tasks with regards to implementing and using classes and objects in Python. [click](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x08-python-more_classes)
-
----
-
-## Python - Everything is Object
-
----
-
-Understanding fundamentally how everything in Python works as an object. [click](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x09-python-everything_is_object)
-
-## Python - Inheritance
-
----
-
-Understanding and applying the concept of inheritance in Python. [click](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x0A-python-inheritance)
-
-## Python - Input/Output
-
-Understanding how to work with files from within a Python programme. [click](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x0B-python-input_output)
-
----
-
-## Python - Almost a Circle
-
-Learning to implement unittest in large projects. [click]()
+### [JavaScript - Warm Up]()
