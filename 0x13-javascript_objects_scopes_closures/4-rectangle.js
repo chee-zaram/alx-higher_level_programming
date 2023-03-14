@@ -2,7 +2,7 @@
 // defines a rectangle based on width and height
 
 class Rectangle {
-  constructor(w, h) {
+  constructor (w, h) {
     if (parseInt(w) < 1 || parseInt(h) < 1) {
       return;
     }
@@ -11,23 +11,23 @@ class Rectangle {
     this.height = h;
   }
 
-  print() {
+  print () {
     for (let i = 0; i < this.height; i++) {
-      let line = "";
+      let line = '';
       for (let i = 0; i < this.width; i++) {
-        line += "X";
+        line += 'X';
       }
       console.log(line);
     }
   }
 
-  rotate() {
+  rotate () {
     const temp = this.height;
     this.height = this.width;
     this.width = temp;
   }
 
-  double() {
+  double () {
     this.width *= 2;
     this.height *= 2;
   }
