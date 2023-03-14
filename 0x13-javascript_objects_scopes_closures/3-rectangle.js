@@ -11,10 +11,7 @@ class Rectangle {
 
   print () {
     for (let i = 0; i < this.height; i++) {
-      let line = '';
-      for (let i = 0; i < this.width; i++) {
-        line += 'X';
-      }
+      const line = 'X'.repeat(this.width);
       console.log(line);
     }
   }

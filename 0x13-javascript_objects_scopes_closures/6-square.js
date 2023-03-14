@@ -5,15 +5,13 @@ const SuperSquare = require('./5-square');
 
 class Square extends SuperSquare {
   charPrint (c) {
-    if (c === undefined) {
+    if (c === undefined || !c) {
       c = 'X';
+    } else {
+      c = c.toString();
     }
-
     for (let i = 0; i < this.height; i++) {
-      let line = '';
-      for (let i = 0; i < this.width; i++) {
-        line += c;
-      }
+      const line = c.repeat(this.width);
       console.log(line);
     }
   }
