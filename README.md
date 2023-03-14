@@ -103,3 +103,8 @@ We do some more advanced quering and operations on databases.
 
 This project teaches JavaScript syntax and the basic operations that can be performed
 using JavaScript which are similar to other languages.
+
+### [JavaScript - Objects, Scopes and Closures](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x13-javascript_objects_scopes_closures)
+
+Get comfortable with the concept of OOP in JavaScript, functions that wrap around functions
+and the scope of variables.
