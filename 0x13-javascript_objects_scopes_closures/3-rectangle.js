@@ -3,17 +3,15 @@
 
 class Rectangle {
   constructor (w, h) {
-    if (parseInt(w) < 1 || parseInt(h) < 1) {
-      return;
+    if (parseInt(w) > 0 && parseInt(h) > 0) {
+      this.width = w;
+      this.height = h;
     }
-
-    this.width = w;
-    this.height = h;
   }
 
   print () {
-    let line = '';
     for (let i = 0; i < this.height; i++) {
+      let line = '';
       for (let i = 0; i < this.width; i++) {
         line += 'X';
       }
