@@ -112,7 +112,7 @@ using JavaScript which are similar to other languages.
 Get comfortable with the concept of OOP in JavaScript, functions that wrap around functions
 and the scope of variables.
 
-### [Python - Object-Relational Mapping]()
+### [Python - Object-Relational Mapping](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x0F-python-object_relational_mapping)
 
 <a id="orm"></a>
 In this project, we learn various ways to connect to a MySQL database from a Python script.
