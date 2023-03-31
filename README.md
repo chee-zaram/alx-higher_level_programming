@@ -20,6 +20,7 @@
 - <a href="#js">JavaScript - Warm Up</a>
 - <a href="#more_js">JavaScript - Objects, Scopes and Closures</a>
 - <a href="#orm">Python - Object-Relational Mapping</a>
+- <a href="#network">Python - Network #0</a>
 
 ---
 
@@ -116,3 +117,8 @@ and the scope of variables.
 
 <a id="orm"></a>
 In this project, we learn various ways to connect to a MySQL database from a Python script.
+
+### [Python - Network #0](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x10-python-network_0)
+
+<a id="network"></a>
+This project aims to teach basic networking concepts in Python.
