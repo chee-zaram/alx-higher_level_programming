@@ -21,6 +21,7 @@
 - <a href="#more_js">JavaScript - Objects, Scopes and Closures</a>
 - <a href="#orm">Python - Object-Relational Mapping</a>
 - <a href="#network">Python - Network #0</a>
+- <a href="#network-1">Python - Network #1</a>
 
 ---
 
@@ -122,3 +123,8 @@ In this project, we learn various ways to connect to a MySQL database from a Pyt
 
 <a id="network"></a>
 This project aims to teach basic networking concepts in Python.
+
+### [Python - Network #1](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x11-python-network_1)
+
+<a id="network-1"></a>
+Here, we learn more about writing network programmes and applications in Python.
