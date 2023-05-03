@@ -22,109 +22,107 @@
 - <a href="#orm">Python - Object-Relational Mapping</a>
 - <a href="#network">Python - Network #0</a>
 - <a href="#network-1">Python - Network #1</a>
+- <a href="#jquery">JavaScript - Web jQuery</a>
 
 ---
 
 ### Introduction
 
-<a id="intro"></a>
-This repo contains mainly projects done with the Python programming language in
-fullfilment of requirements for completing the Software Engineering programme
-at Holberton School, presented by ALX.
+<a id="intro"></a> This repo contains mainly projects done with the Python
+programming language in fullfilment of requirements for completing the Software
+Engineering programme at Holberton School, presented by ALX.
 
 ### [Python - Hello, World](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x00-python-hello_world)
 
-<a id="hello"></a>
-Basics of Python, focusing on string manipulation.
+<a id="hello"></a> Basics of Python, focusing on string manipulation.
 
 ### [Python - if/else, loops, functions](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x01-python-if_else_loops_functions)
 
-<a id="conditionals"></a>
-Using conditional statements and loops within Python programmers.
+<a id="conditionals"></a> Using conditional statements and loops within Python
+programmers.
 
 ### [Python - import & modules](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x02-python-import_modules)
 
-<a id="imports"></a>
-Importing names and variables from modules and making use of them. Using the `dir()` built-in.
+<a id="imports"></a> Importing names and variables from modules and making use
+of them. Using the `dir()` built-in.
 
 ### [Python - Data Structures: Lists, Tuples](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x03-python-data_structures)
 
-<a id="data"></a>
-Introduction to using data structures in Python.
+<a id="data"></a> Introduction to using data structures in Python.
 
 ### [Python - More Data Structures: Set, Dictionary](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x04-python-more_data_structures)
 
-<a id="more_data"></a>
-Here, we solve tasks that help us master the concepts of **dictionaries**, **set**, the **lambda** function, **map**, **reduce** and **filter** functions, and how to use them.
+<a id="more_data"></a> Here, we solve tasks that help us master the concepts of
+**dictionaries**, **set**, the **lambda** function, **map**, **reduce** and
+**filter** functions, and how to use them.
 
 ### [Python - Exceptions](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x05-python-exceptions)
 
-<a id="exception"></a>
-Error and exception handling during during programme run.
+<a id="exception"></a> Error and exception handling during during programme run.
 
 ### [Python - Classes and Objects](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x06-python-classes)
 
-<a id="classes"></a>
-Learning about Object Oriented Programming (OOB) in Python.
+<a id="classes"></a> Learning about Object Oriented Programming (OOB) in Python.
 
 ### [Python - More Classes and Objects](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x08-python-more_classes)
 
-<a id="more_classes"></a>
-Contains more advanced tasks with regards to implementing and using classes and objects in Python.
+<a id="more_classes"></a> Contains more advanced tasks with regards to
+implementing and using classes and objects in Python.
 
 ### [Python - Everything is Object](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x09-python-everything_is_object)
 
-<a id="objects"></a>
-Understanding fundamentally how everything in Python works as an object.
+<a id="objects"></a> Understanding fundamentally how everything in Python works
+as an object.
 
 ### [Python - Inheritance](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x0A-python-inheritance)
 
-<a id="inheritance"></a>
-Understanding and applying the concept of inheritance in Python.
+<a id="inheritance"></a> Understanding and applying the concept of inheritance
+in Python.
 
 ### [Python - Input/Output](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x0B-python-input_output)
 
-<a id="inout"></a>
-Understanding how to work with files from within a Python programme.
+<a id="inout"></a> Understanding how to work with files from within a Python
+programme.
 
 ### [Python - Almost a Circle](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x0C-python-almost_a_circle)
 
-<a id="circle"></a>
-Learning to implement unittest in large projects.
+<a id="circle"></a> Learning to implement unittest in large projects.
 
 ### [SQL - Introduction](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x0D-SQL_introduction)
 
-<a id="sql"></a>
-Learning the basics of quering databases uses SQL syntax.
+<a id="sql"></a> Learning the basics of quering databases uses SQL syntax.
 
 ### [SQL - More Queries](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x0E-SQL_more_queries)
 
-<a id="moresql"></a>
-We do some more advanced quering and operations on databases.
+<a id="moresql"></a> We do some more advanced quering and operations on
+databases.
 
 ### [JavaScript - Warm Up](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x12-javascript-warm_up)
 
-<a id="js"></a>
-This project teaches JavaScript syntax and the basic operations that can be performed
-using JavaScript which are similar to other languages.
+<a id="js"></a> This project teaches JavaScript syntax and the basic operations
+that can be performed using JavaScript which are similar to other languages.
 
 ### [JavaScript - Objects, Scopes and Closures](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x13-javascript_objects_scopes_closures)
 
-<a id="more_js"></a>
-Get comfortable with the concept of OOP in JavaScript, functions that wrap around functions
-and the scope of variables.
+<a id="more_js"></a> Get comfortable with the concept of OOP in JavaScript,
+functions that wrap around functions and the scope of variables.
 
 ### [Python - Object-Relational Mapping](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x0F-python-object_relational_mapping)
 
-<a id="orm"></a>
-In this project, we learn various ways to connect to a MySQL database from a Python script.
+<a id="orm"></a> In this project, we learn various ways to connect to a MySQL
+database from a Python script.
 
 ### [Python - Network #0](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x10-python-network_0)
 
-<a id="network"></a>
-This project aims to teach basic networking concepts in Python.
+<a id="network"></a> This project aims to teach basic networking concepts in
+Python.
 
 ### [Python - Network #1](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x11-python-network_1)
 
-<a id="network-1"></a>
-Here, we learn more about writing network programmes and applications in Python.
+<a id="network-1"></a> Here, we learn more about writing network programmes and
+applications in Python.
+
+### [JavaScript - Web jQuery](https://github.com/chee-zaram/alx-higher_level_programming/tree/main/0x15-javascript-web_jquery)
+
+<a id="jquery"></a> This project is an introduction to dynamic web design using
+jQuery.
